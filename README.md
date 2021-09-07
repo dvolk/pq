@@ -4,8 +4,6 @@ jq for Python programmers.
 
 Process JSON and HTML on the command-line with familiar syntax.
 
-Extremely simple and easy to extend.
-
 ## Installation
 
     pip3 install -r requests argh bs4
@@ -17,8 +15,9 @@ Extremely simple and easy to extend.
 
 Find average link score on HN front page:
 
-    $ curl -s https://news.ycombinator.com | pq --html -c "statistics.mean([int(x.text.split(' ')[0]) for x in data.find_all('span', {'class': 'score'})])"
-    133.17241379310346
+    $ curl -s https://news.ycombinator.com |\
+      pq --html -c "statistics.mean([int(x.text.split(' ')[0]) for x in data.find_all('span', {'class': 'score'})])"
+    123.10344827586206
 
 Sum JSON values:
 
