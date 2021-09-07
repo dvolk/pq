@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 
 import json
+import statistics
 import sys
 
 import argh
 import bs4
-import requests
 
 
-def pq(cmd="data", url=False, html=False):
+def pq(cmd="data", html=False):
     data = sys.stdin.read().strip()
-    if url:
-        data = requests.get(data).text
     if html:
         data = bs4.BeautifulSoup(data, "html.parser")
     else:
