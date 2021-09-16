@@ -6,7 +6,7 @@ Process JSON and HTML on the command-line with familiar syntax.
 
 ## Installation
 
-    pip3 install -r argh bs4
+    pip3 install argh bs4
     wget https://raw.githubusercontent.com/dvolk/pq/master/pq
     sudo cp pq /usr/bin
     sudo chmod a+x /usr/bin/pq
